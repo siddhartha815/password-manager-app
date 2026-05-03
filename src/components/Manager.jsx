@@ -59,8 +59,7 @@ const Manager = () => {
   };
 
   const handleImgClick = () => {
-    console.log(visref.current.src);
-    if (visref.current.src === "view-off.svg") {
+    if (visref.current.src === "https://siddhartha815.github.io/password-manager-app/view-off.svg") {
       visref.current.src = "view.svg";
       password.current.type = "password";
     } else {
