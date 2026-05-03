@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
-
+import { Eye, EyeOff } from "lucide-react";
 import "react-toastify/dist/ReactToastify.css";
 
 const Manager = () => {
@@ -59,11 +59,11 @@ const Manager = () => {
   };
 
   const handleImgClick = () => {
-    if (visref.current.src === "http://localhost:5173/view-off.svg") {
-      visref.current.src = "http://localhost:5173/view.svg";
+    if (visref.current.src === "http://localhost:5173/password-manager-app/view-off.svg") {
+      visref.current.src = "http://localhost:5173/password-manager-app/view.svg";
       password.current.type = "password";
     } else {
-      visref.current.src = "http://localhost:5173/view-off.svg";
+      visref.current.src = "http://localhost:5173/password-manager-app/view-off.svg";
       password.current.type = "text";
     }
   };
@@ -148,7 +148,7 @@ const Manager = () => {
               ref={password}
             />
             <img
-              src="/view.svg"
+              src="view.svg"
               alt="toggle visibility"
               className="absolute right-2 cursor-pointer"
               ref={visref}
