@@ -59,11 +59,12 @@ const Manager = () => {
   };
 
   const handleImgClick = () => {
-    if (visref.current.src === "http://localhost:5173/password-manager-app/view-off.svg") {
-      visref.current.src = "http://localhost:5173/password-manager-app/view.svg";
+    console.log(visref.current.src);
+    if (visref.current.src === "view-off.svg") {
+      visref.current.src = "view.svg";
       password.current.type = "password";
     } else {
-      visref.current.src = "http://localhost:5173/password-manager-app/view-off.svg";
+      visref.current.src = "view-off.svg";
       password.current.type = "text";
     }
   };
